@@ -72,7 +72,7 @@ router.get("/sharif-rsvp-list",function(req,res){
 
         // create a rsvp, information comes from AJAX request from Angular
         Rsvp.create({
-            user : 'user'
+            user : 'user',
             name : req.body.text,
             done : false
         }, function(err, rsvp) {
@@ -115,5 +115,4 @@ app.use("/", router);
 // });
 
 // listen (start app with node server.js) ======================================
-app.listen(8080);
-console.log("App listening on port 8080");
+app.listen(5000);
