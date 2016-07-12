@@ -1,0 +1,64 @@
+<html ng-app="sharifRsvp">
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway|Work+Sans" rel="stylesheet">
+    <script src="core.js"></script>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar-right" aria-expanded="false">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="nav-bar-right">
+        <ul class="nav navbar-nav navbar-center">
+          <li><a href="/">ABOUT US</a></li>
+          <li><a href="/details">DETAILS</a></li>
+          <li><a href="/wedding-party">WEDDING PARTY</a></li>
+          <li class="active"><a href="/rsvp">RSVP</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="img-header">
+    <img class="img-responsive" src="img/c4" alt="">
+  </div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+    <div class="container" ng-controller="mainController">
+
+        <!-- FORM TO CREATE RSVPS -->
+        <div id="rsvp-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Your Name + Guests" ng-model="formData.text">
+                    </div>
+
+                    <!-- createToDo() WILL CREATE NEW RSVPS -->
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createRsvp()">RSVP</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

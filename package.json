@@ -1,0 +1,14 @@
+{
+  "name"         : "sharif-wedding",
+  "version"      : "0.0.0",
+  "description"  : "Website for Sharif Wedding",
+  "main"         : "server.js",
+  "author"       : "Sara",
+  "dependencies" : {
+    "body-parser"    : "^1.4.3",
+    "express"        : "^4.13.4",
+    "method-override": "^2.1.3",
+    "mongoose"       : "^4.4.12",
+    "morgan"         : "^1.1.1"
+  }
+}

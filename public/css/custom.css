@@ -1,0 +1,141 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Work Sans', sans-serif;*/
+}
+
+.navbar, .nav {
+  display: flex;
+  justify-content: center;
+}
+
+/*.nav > li {
+  justify-content: space-around;
+}*/
+
+.nav > li > a {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*line-height: 75px;*/
+  padding: 30px;
+}
+
+.navbar-inverse {
+  opacity: .8;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  background-color: transparent;
+  border-bottom: 4px solid  #cc0000;
+}
+
+li > a {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  font-size: x-large;
+}
+
+.img-header {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.img-responsive {
+  overflow: hidden;
+}
+
+
+/*body*/
+
+.jumbotron {
+  margin: 0px;
+  padding: 100px;
+}
+
+.wedding-date {
+  color: #cc0000;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  font-size: 150px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.wedding-hashtag {
+  color: #cc0000;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#sharif-carousel {
+  width: 50vw;
+  height: auto;
+  margin: auto;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+}
+
+/*wedding party*/
+.party-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.thumbnail.party-person {
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+  margin: 15px;
+  overflow: hidden;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail.party-person:hover {
+  box-shadow: inset 200px 200px 300px 200px rgba(40,40,40,.6);
+}
+
+.thumbnail.party-person * {
+  z-index: -10;
+  color: transparent;
+  display: flex;
+  margin: auto;
+}
+
+.thumbnail.party-person:hover * {
+  z-index: 10;
+  color: white;
+}
+
+.jumbotron.details {
+  padding: 40px;
+}
+
+.jumbotron.details > div {
+  text-align: center;
+  border: 1px dotted #999;
+  padding: 30px;
+}
+
+.jumbotron.details > div > h1 {
+  margin-top: 10px;
+}
+
+.glyphicon-heart-empty {
+  color: #cc0000;
+}
