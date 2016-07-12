@@ -33,7 +33,7 @@ router.use(function (req,res,next) {
 
 
 router.get("/about",function(req,res){
-  res.sendfile('./index.html');
+  res.sendfile('./public/index.html');
 });
 
 router.get("/details",function(req,res){
