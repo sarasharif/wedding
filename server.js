@@ -27,7 +27,6 @@ app.use(methodOverride());
 // routes ======================================================================
 
 router.use(function (req,res,next) {
-  console.log("/" + req.method);
   next();
 });
 
@@ -110,9 +109,9 @@ router.get("/sharif-rsvp-list",function(req,res){
 
 app.use("/", router);
 
-// app.get('*', function(req, res) {
-//   res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-// });
+app.get('*', function(req, res) {
+  res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+});
 
 // listen (start app with node server.js) ======================================
 app.listen(5000);
