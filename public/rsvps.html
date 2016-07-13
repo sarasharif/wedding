@@ -41,17 +41,32 @@
         </div>
 
         <!-- RSVP LIST -->
-        <div id="rsvp-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
+        <div id="rsvp-list">
+          <div>
+            <table class="table table-hover table-responsive">
+              <tr>
+                <th> </th>
+                <th>name</th>
+                <th>guest</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Neither</th>
+                <th>#</th>
+              </tr>
+              <tr ng-repeat="rsvp in rsvps">
+                <td>
+                  <span class="glyphicon glyphicon-trash" ng-click="deleteRsvp(rsvp._id)"></span>
+                </td>
+                <td>{{ rsvp.name }}</td>
+                <td>{{ rsvp.guest }}</td>
+                <td>{{ rsvp.friday }}</td>
+                <td>{{ rsvp.saturday }}</td>
+                <td>{{ rsvp.attending }}</td>
+                <td>{{ rsvp.number }}</td>
+              </tr>
+            </table>
 
-                <!-- LOOP OVER THE RSVPS IN $scope.rsvps -->
-                <div class="checkbox" ng-repeat="rsvp in rsvps">
-                    <label>
-                        <input type="checkbox" ng-click="deleteRsvp(rsvp._id)"> {{ rsvp.name }}
-                    </label>
-                </div>
-
-            </div>
+          </div>
         </div>
 
         <!-- FORM TO CREATE RSVPS -->

@@ -6,7 +6,6 @@ function mainController($scope, $http) {
     $http.get('/api/rsvps')
         .success(function(data) {
             $scope.rsvps = data;
-            console.log(data);
         })
         .error(function(data) {
             console.log('Error: ' + data);
@@ -18,7 +17,6 @@ function mainController($scope, $http) {
             .success(function(data) {
                 $scope.formData = {}; // clear the form so our user is ready to enter another
                 $scope.rsvps = data;
-                console.log(data);
             })
             .error(function(data) {
                 console.log('Error: ' + data);
@@ -30,7 +28,6 @@ function mainController($scope, $http) {
         $http.delete('/api/rsvps/' + id)
             .success(function(data) {
                 $scope.rsvps = data;
-                console.log(data);
             })
             .error(function(data) {
                 console.log('Error: ' + data);

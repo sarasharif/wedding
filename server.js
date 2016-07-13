@@ -21,7 +21,12 @@ app.use(methodOverride());
 // define model =================
     var Rsvp = mongoose.model('Rsvp', {
         user : String,
-        name : String
+        name : String,
+        guest : String,
+        friday: String,
+        saturday: String,
+        absent: String,
+        number : Number
     });
 
 // routes ======================================================================
@@ -68,11 +73,15 @@ router.get("/sharif-rsvp-list",function(req,res){
 
     // create rsvp and send back all todos after creation
     app.post('/api/rsvps', function(req, res) {
-
         // create a rsvp, information comes from AJAX request from Angular
         Rsvp.create({
             user : 'user',
-            name : req.body.text,
+            name : req.body.name,
+            guest : req.body.guest,
+            friday : req.body.friday,
+            saturday : req.body.saturday,
+            absent : req.body.absent,
+            number : req.body.number,
             done : false
         }, function(err, rsvp) {
             if (err)
@@ -80,9 +89,9 @@ router.get("/sharif-rsvp-list",function(req,res){
 
             // get and return all the rsvps after you create another
             Rsvp.find(function(err, rsvps) {
-                if (err)
-                    res.send(err)
-                res.json(rsvps);
+              if (err)
+                res.send(err)
+              res.json(rsvps);
             });
         });
 

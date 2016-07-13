@@ -129,6 +129,7 @@ li > a {
 .jumbotron.details > div {
   text-align: center;
   border: 1px dotted #999;
+  border-radius: 4px;
   padding: 30px;
 }
 
@@ -138,4 +139,11 @@ li > a {
 
 .glyphicon-heart-empty {
   color: #cc0000;
+}
+
+span.glyphicon-trash:hover {
+  cursor: pointer;
+}
+
+.form-control.autowidth {
 }
