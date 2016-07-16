@@ -26,7 +26,8 @@ app.use(methodOverride());
         friday: String,
         saturday: String,
         absent: String,
-        number : Number
+        number : Number,
+        notes : String
     });
 
 // routes ======================================================================
@@ -73,6 +74,7 @@ router.get("/sharif-rsvp-list",function(req,res){
 
     // create rsvp and send back all todos after creation
     app.post('/api/rsvps', function(req, res) {
+        console.log(req);
         // create a rsvp, information comes from AJAX request from Angular
         Rsvp.create({
             user : 'user',
@@ -82,6 +84,7 @@ router.get("/sharif-rsvp-list",function(req,res){
             saturday : req.body.saturday,
             absent : req.body.absent,
             number : req.body.number,
+            notes : req.body.notes,
             done : false
         }, function(err, rsvp) {
             if (err)
