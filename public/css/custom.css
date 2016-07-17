@@ -151,3 +151,7 @@ span.glyphicon-trash:hover {
 span.from {
   font-size: 18px;
 }
+
+button.submit {
+  background: #cc0000;
+}
