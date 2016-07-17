@@ -27,7 +27,7 @@
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
   background-color: transparent;
-  border-bottom: 4px solid  #cc0000;
+  border-bottom: 4px solid  #99062A;
 }
 
 li > a {
@@ -39,6 +39,7 @@ li > a {
 }
 
 .img-header {
+  position: relative;
   width: 100%;
   height: auto;
   max-height: 90vh;
@@ -46,7 +47,22 @@ li > a {
 }
 
 .img-responsive {
+  position: relative;
   overflow: hidden;
+}
+
+.initials {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 300px;
+  opacity: .7;
+  bottom: 0;
+  color: white;
+  z-index: 10;
 }
 
 
@@ -58,7 +74,7 @@ li > a {
 }
 
 .wedding-date {
-  color: #cc0000;
+  color: #99062A;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
   font-size: 150px;
@@ -69,7 +85,7 @@ li > a {
 }
 
 .wedding-hashtag {
-  color: #cc0000;
+  color: #99062A;
   text-align: center;
   font-family: 'Poiret One', cursive;
   font-size: 50px;
@@ -138,7 +154,7 @@ li > a {
 }
 
 .glyphicon-heart-empty {
-  color: #cc0000;
+  color: #99062A;
 }
 
 span.glyphicon-trash:hover {
@@ -153,5 +169,5 @@ span.from {
 }
 
 button.submit {
-  background: #cc0000;
+  background: #99062A;
 }
