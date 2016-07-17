@@ -51,51 +51,67 @@
           <strong>Done!</strong> {{successTextAlert}}
         </div>
 
-        <div class="alert alert-success" ng-show="showWarningAlert">
-          <strong>Um!</strong> {{warningTextAlert}}
-        </div>
-
         <div class="form-group row">
-          <label for="name" class="col-sm-2 form-control-label">Your Name</label>
+          <label for="name" class="col-sm-2 form-control-label">Name*</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" placeholder="your name" ng-model="formData.name" required>
+            <input type="text" class="form-control" id="name" placeholder="Please enter your name here" ng-model="formData.name" required>
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="guestname" class="col-sm-2 form-control-label">Guest Name(s)</label>
+          <label for="email" class="col-sm-2 form-control-label">Email</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="guestname" placeholder="guest name(s)" ng-model="formData.guest">
+            <input type="email" class="form-control" id="email" placeholder="Please enter your email address here" ng-model="formData.email">
           </div>
         </div>
 
         <div class="form-group row">
-          <label class="col-sm-2">RSVP</label>
+          <label class="col-sm-2">RSVP*</label>
+          <div class="col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="gridRadios" id="gridRadios1" ng-model="formData.attending" ng-value="true" required>
+                YES
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gridRadios" id="gridRadios2" ng-model="formData.attending" ng-value="false">
+                NO
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row" ng-show="formData.attending">
+          <label class="col-sm-2">Attending</label>
           <div class="col-sm-10">
             <div class="checkbox">
               <label>
                 <input type="checkbox" ng-model="formData.friday" ng-true-value="x" ng-false-value="''">
-                I will attend Friday
+                Friday
               </label>
             </div>
             <div class="checkbox">
               <label>
                 <input type="checkbox" ng-model="formData.saturday" ng-true-value="x" ng-false-value="''">
-                I will attend Saturday
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" ng-model="formData.absent" ng-true-value="x" ng-false-value="''">
-                I cannot attend
+                Saturday
               </label>
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="numberattending" class="col-sm-2 form-control-label">Number Attending</label>
+
+        <div class="form-group row" ng-show="formData.attending">
+          <label for="numberattending" class="col-sm-2 form-control-label">Number Attending*</label>
           <div class="col-sm-10">
-            <input type="number" value="0" min="0" max="4" class="form-control" id="numberattending" ng-model="formData.number" required>
+            <input type="number" min="1" max="4" class="form-control" id="numberattending" ng-model="formData.number" required>
+          </div>
+        </div>
+
+        <div class="form-group row" ng-show="formData.number>1">
+          <label for="guestname" class="col-sm-2 form-control-label">Guest Name(s)</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="guestname" placeholder="Please enter the name(s) of your guest(s) here" ng-model="formData.guest">
           </div>
         </div>
 

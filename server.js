@@ -22,11 +22,12 @@ app.use(methodOverride());
     var Rsvp = mongoose.model('Rsvp', {
         user : String,
         name : String,
-        guest : String,
+        email : String,
+        attending : String,
         friday: String,
         saturday: String,
-        absent: String,
         number : Number,
+        guest : String,
         notes : String
     });
 
@@ -78,11 +79,12 @@ router.get("/sharif-rsvp-list",function(req,res){
         Rsvp.create({
             user : 'user',
             name : req.body.name,
-            guest : req.body.guest,
+            email : req.body.email,
+            attending : req.body.attending,
             friday : req.body.friday,
             saturday : req.body.saturday,
-            absent : req.body.absent,
             number : req.body.number,
+            guest : req.body.guest,
             notes : req.body.notes,
             done : false
         }, function(err, rsvp) {

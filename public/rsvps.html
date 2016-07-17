@@ -47,11 +47,12 @@
               <tr>
                 <th> </th>
                 <th>name</th>
-                <th>guest</th>
+                <th>email</th>
+                <th>RSVP</th>
                 <th>Friday</th>
                 <th>Saturday</th>
-                <th>Neither</th>
                 <th>#</th>
+                <th>guest</th>
                 <th>notes</th>
               </tr>
               <tr ng-repeat="rsvp in rsvps">
@@ -59,34 +60,18 @@
                   <span class="glyphicon glyphicon-trash" ng-click="deleteRsvp(rsvp._id)"></span>
                 </td>
                 <td>{{ rsvp.name }}</td>
-                <td>{{ rsvp.guest }}</td>
+                <td>{{ rsvp.email }}</td>
+                <td>{{ rsvp.attending }}</td>
                 <td>{{ rsvp.friday }}</td>
                 <td>{{ rsvp.saturday }}</td>
-                <td>{{ rsvp.attending }}</td>
                 <td>{{ rsvp.number }}</td>
+                <td>{{ rsvp.guest }}</td>
                 <td>{{ rsvp.notes }}</td>
               </tr>
             </table>
 
           </div>
         </div>
-
-        <!-- FORM TO CREATE RSVPS -->
-        <div id="rsvp-form" class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <form>
-                    <div class="form-group">
-
-                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                        <input type="text" class="form-control input-lg text-center" placeholder="Your name here" ng-model="formData.text">
-                    </div>
-
-                    <!-- createToDo() WILL CREATE NEW RSVPS -->
-                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createRsvp()">RSVP</button>
-                </form>
-            </div>
-        </div>
-
     </div>
 
 </body>
