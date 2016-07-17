@@ -17,10 +17,12 @@ function mainController($scope, $http) {
             .success(function(data) {
                 $scope.formData = {}; // clear the form so our user is ready to enter another
                 $scope.rsvps = data;
-                console.log(data);
+                $scope.successTextAlert = "Thank you!";
+                $scope.showSuccessAlert = true;
             })
             .error(function(data) {
-                console.log('Error: ' + data);
+              $scope.warningTextAlert = "Ooooops!";
+              $scope.showWarningAlert = true;
             });
     };
 

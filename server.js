@@ -74,7 +74,6 @@ router.get("/sharif-rsvp-list",function(req,res){
 
     // create rsvp and send back all todos after creation
     app.post('/api/rsvps', function(req, res) {
-        console.log(req);
         // create a rsvp, information comes from AJAX request from Angular
         Rsvp.create({
             user : 'user',
@@ -88,6 +87,7 @@ router.get("/sharif-rsvp-list",function(req,res){
             done : false
         }, function(err, rsvp) {
             if (err)
+              // console.log("HELP");
                 res.send(err);
 
             // get and return all the rsvps after you create another
@@ -111,7 +111,7 @@ router.get("/sharif-rsvp-list",function(req,res){
             // get and return all the rsvps after you create another
             Rsvp.find(function(err, rsvps) {
                 if (err)
-                    res.send(err)
+                  res.send(err)
                 res.json(rsvps);
             });
         });
