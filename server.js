@@ -37,23 +37,23 @@ router.use(function (req,res,next) {
   next();
 });
 
-
-router.get("/about",function(req,res){
-  res.sendfile('./public/index.html');
-});
-
-router.get("/details",function(req,res){
-  res.sendfile('./public/details.html');
-});
-
-router.get("/wedding-party",function(req,res){
-  res.sendfile('./public/wedding-party.html');
-});
-
-router.get("/rsvp",function(req,res){
-  res.sendfile('./public/rsvp.html');
-});
-
+//
+// router.get("/",function(req,res){
+//   res.sendfile('./public/index.html');
+// });
+//
+// router.get("/details",function(req,res){
+//   res.sendfile('./public/details.html');
+// });
+//
+// router.get("/wedding-party",function(req,res){
+//   res.sendfile('./public/wedding-party.html');
+// });
+//
+// router.get("/rsvp",function(req,res){
+//   res.sendfile('./public/rsvp.html');
+// });
+//
 router.get("/sharif-rsvp-list",function(req,res){
   res.sendfile('./public/rsvps.html');
 });
