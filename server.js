@@ -1,4 +1,4 @@
-// set up ========================
+// set up
 var express  = require('express');
 var app      = express();                               // create our app w/ express
 var router = express.Router();
@@ -7,7 +7,7 @@ var morgan = require('morgan');             // log requests to the console (expr
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
-// configuration =================
+// configuration
 
 mongoose.connect('mongodb://Sara:SharifWedding@jello.modulusmongo.net:27017/erA6ryna');     // connect to mongoDB database on modulus.io
 
@@ -18,20 +18,20 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
-// define model =================
-    var Rsvp = mongoose.model('Rsvp', {
-        user : String,
-        name : String,
-        email : String,
-        attending : String,
-        friday: String,
-        saturday: String,
-        number : Number,
-        guest : String,
-        notes : String
-    });
+// define model
+var Rsvp = mongoose.model('Rsvp', {
+  user : String,
+  name : String,
+  email : String,
+  attending : String,
+  friday: String,
+  saturday: String,
+  number : Number,
+  guest : String,
+  notes : String
+});
 
-// routes ======================================================================
+// routes ==
 
 router.use(function (req,res,next) {
   next();
@@ -58,20 +58,18 @@ router.get("/sharif-rsvp-list",function(req,res){
   res.sendfile('./public/rsvps.html');
 });
 
-    // api ---------------------------------------------------------------------
-    // get all rsvps
-    app.get('/api/rsvps', function(req, res) {
+  app.get('/api/rsvps', function(req, res) {
 
         // use mongoose to get all rsvps in the database
-        Rsvp.find(function(err, rsvps) {
+    Rsvp.find(function(err, rsvps) {
 
             // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-            if (err)
-                res.send(err)
+      if (err)
+        res.send(err);
 
-            res.json(rsvps); // return all todos in JSON format
-        });
+      res.json(rsvps); // return all todos in JSON format
     });
+  });
 
     // create rsvp and send back all todos after creation
     app.post('/api/rsvps', function(req, res) {
@@ -127,5 +125,5 @@ app.get('*', function(req, res) {
   res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
-// listen (start app with node server.js) ======================================
+// listen (start app with node server.js) ====
 app.listen(process.env.PORT || 5000);
