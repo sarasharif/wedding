@@ -37,4 +37,40 @@ function mainController($scope, $http) {
             });
     };
 
+    $scope.getTotals = function(){
+      var totals = {};
+      totals.all = totals.friday = totals.saturday = 0;
+      for(var i = 0; i < $scope.rsvps.length; i++){
+        var res = $scope.rsvps[i];
+        if (res.attending == "true") {
+          totals.all += res.number;
+        }
+        if (res.attending == "true" && res.friday === "x") {
+          totals.friday += res.number;
+        }
+        if (res.attending == "true" && res.saturday === "x") {
+          totals.saturday += res.number;
+        }
+      }
+      return totals;
+    };
+
+    // $scope.getFriday = function(){
+    //   var total = 0;
+    //   for(var i = 0; i < $scope.rsvps.length; i++){
+    //     var res = $scope.rsvps[i];
+    //
+    //   }
+    //   return total;
+    // };
+    //
+    // $scope.getSaturday = function(){
+    //   var total = 0;
+    //   for(var i = 0; i < $scope.rsvps.length; i++){
+    //     var res = $scope.rsvps[i];
+    //
+    //   }
+    //   return total;
+    // };
+
 }

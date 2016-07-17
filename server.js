@@ -81,7 +81,7 @@ router.get("/sharif-rsvp-list",function(req,res){
             attending : req.body.attending,
             friday : req.body.friday,
             saturday : req.body.saturday,
-            number : req.body.number,
+            number : req.body.number || 0,
             guest : req.body.guest,
             notes : req.body.notes,
             done : false
