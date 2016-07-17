@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');    // pull information from HTML POST (
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 // configuration
-
 mongoose.connect('mongodb://Sara:SharifWedding@jello.modulusmongo.net:27017/erA6ryna');     // connect to mongoDB database on modulus.io
 
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
@@ -37,23 +36,6 @@ router.use(function (req,res,next) {
   next();
 });
 
-//
-// router.get("/",function(req,res){
-//   res.sendfile('./public/index.html');
-// });
-//
-// router.get("/details",function(req,res){
-//   res.sendfile('./public/details.html');
-// });
-//
-// router.get("/wedding-party",function(req,res){
-//   res.sendfile('./public/wedding-party.html');
-// });
-//
-// router.get("/rsvp",function(req,res){
-//   res.sendfile('./public/rsvp.html');
-// });
-//
 router.get("/sharif-rsvp-list",function(req,res){
   res.sendfile('./public/rsvps.html');
 });
