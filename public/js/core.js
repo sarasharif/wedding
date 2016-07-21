@@ -100,6 +100,16 @@ function mainController($scope, $http) {
       name: "Chris",
       role: "Groomsman",
       image: "christian.jpg"
+    },
+    {
+      name: "Akshay",
+      role: "Usher",
+      image: "akshay.jpg"
+    },
+    {
+      name: "Brian",
+      role: "Usher",
+      image: "brian.jpg"
     }
   ];
 }
