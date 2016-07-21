@@ -8,8 +8,6 @@ var app = angular.module('singlePage', [
  */
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
-    // .when("/", {templateUrl: "public/partials/about.html", controller: "PageCtrl"})
-    // Pages
     .when("/", {templateUrl: "../partials/about.html", controller: "PageCtrl"})
     .when("/details", {templateUrl: "../partials/details.html", controller: "PageCtrl"})
     .when("/rsvp", {templateUrl: "../partials/rsvp.html", controller: "PageCtrl"})
@@ -22,9 +20,9 @@ app.config(['$routeProvider', function ($routeProvider) {
  */
 app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   // Activates the Carousel
-  $('.carousel').carousel({
-    interval: 5000
-  });
+  // $('.carousel').carousel({
+  //   interval: 5000
+  // });
 
   // Activates Tooltips for Social Links
   $('.tooltip-social').tooltip({

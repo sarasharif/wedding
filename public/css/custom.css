@@ -93,14 +93,14 @@ li > a {
   margin-bottom: 40px;
 }
 
-#photos {
+.carousel-inner {
   width: 50vw;
-  height: auto;
   margin: auto;
 }
 
-.carousel-inner * {
+.imgcontainer > * {
   margin: auto;
+  /*height: 100%*/
 }
 
 .carousel-control.right, .carousel-control.left {
