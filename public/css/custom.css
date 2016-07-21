@@ -99,6 +99,10 @@ li > a {
   margin: auto;
 }
 
+.carousel-inner * {
+  margin: auto;
+}
+
 .carousel-control.right, .carousel-control.left {
   background-image: none;
 }
@@ -152,7 +156,7 @@ li > a {
   margin-top: 10px;
 }
 
-.glyphicon-heart-empty {
+.glyphicon {
   color: #99062A;
 }
 
