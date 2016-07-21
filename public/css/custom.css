@@ -41,7 +41,6 @@ li > a {
 .img-header {
   position: relative;
   width: 100%;
-  height: auto;
   max-height: 90vh;
   overflow: hidden;
 }
@@ -112,10 +111,10 @@ li > a {
 }
 
 .thumbnail.party-person {
-  height: 300px;
-  width: 300px;
-  border-radius: 300px;
-  margin: 15px;
+  height: 25vw;
+  width: 25vw;
+  border-radius: 3000px;
+  margin: 1vw;
   overflow: hidden;
   background-size: cover;
   display: flex;
