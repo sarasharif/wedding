@@ -28,10 +28,12 @@
                 <th>name</th>
                 <th>email</th>
                 <th>RSVP</th>
-                <th>Friday</th>
-                <th>Saturday</th>
+                <th>Fri</th>
+                <th>Sat</th>
                 <th>#</th>
                 <th>guest</th>
+                <th>V</th>
+                <th>H</th>
                 <th>notes</th>
               </tr>
               <tr ng-repeat="rsvp in rsvps">
@@ -45,6 +47,8 @@
                 <td>{{ rsvp.saturday }}</td>
                 <td>{{ rsvp.number }}</td>
                 <td>{{ rsvp.guest }}</td>
+                <td>{{ rsvp.veg }}</td>
+                <td>{{ rsvp.halal }}</td>
                 <td>{{ rsvp.notes }}</td>
               </tr>
             </table>

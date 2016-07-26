@@ -23,10 +23,12 @@ var Rsvp = mongoose.model('Rsvp', {
   name : String,
   email : String,
   attending : String,
-  friday: String,
-  saturday: String,
+  friday : String,
+  saturday : String,
   number : Number,
   guest : String,
+  veg : String,
+  halal : String,
   notes : String
 });
 
@@ -65,6 +67,8 @@ router.get("/sharif-rsvp-list",function(req,res){
             saturday : req.body.saturday,
             number : req.body.number || 0,
             guest : req.body.guest,
+            veg : req.body.veg,
+            halal : req.body.halal,
             notes : req.body.notes,
             done : false
         }, function(err, rsvp) {
@@ -83,21 +87,21 @@ router.get("/sharif-rsvp-list",function(req,res){
     });
 
     // delete a rsvp
-    app.delete('/api/rsvps/:todo_id', function(req, res) {
-        Rsvp.remove({
-            _id : req.params.todo_id
-        }, function(err, rsvp) {
-            if (err)
-                res.send(err);
-
-            // get and return all the rsvps after you create another
-            Rsvp.find(function(err, rsvps) {
-                if (err)
-                  res.send(err)
-                res.json(rsvps);
-            });
-        });
-    });
+    // app.delete('/api/rsvps/:todo_id', function(req, res) {
+    //     Rsvp.remove({
+    //         _id : req.params.todo_id
+    //     }, function(err, rsvp) {
+    //         if (err)
+    //             res.send(err);
+    //
+    //         // get and return all the rsvps after you create another
+    //         Rsvp.find(function(err, rsvps) {
+    //             if (err)
+    //               res.send(err)
+    //             res.json(rsvps);
+    //         });
+    //     });
+    // });
 
 // application -------------------------------------------------------------
 
