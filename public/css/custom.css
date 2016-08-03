@@ -94,17 +94,25 @@ li > a {
 }
 
 .carousel-inner {
-  height: 70vh;
   margin: auto;
 }
 
 .imgcontainer, .imgcontainer.active {
-  width: 100%;
-  height: 100%;
+  height: 400px;
+  max-height: 70vh;
+  width: auto;
+  margin: auto;
 }
 
-.imgcontainer img, .imgcontainer.active img {
-  height: 500px;
+.imgcontainer img {
+  height: 400px;
+  max-height: 70vh;
+  width: auto;
+  margin: auto;
+}
+
+.imgcontainer.active img {
+  height: 400px;
   max-height: 70vh;
   width: auto;
   margin: auto;
