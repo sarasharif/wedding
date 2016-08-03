@@ -99,21 +99,21 @@ li > a {
 
 .imgcontainer, .imgcontainer.active {
   height: 400px;
-  max-height: 70vh;
+  /*max-height: 70vh;*/
   width: auto;
   margin: auto;
 }
 
 .imgcontainer img {
   height: 400px;
-  max-height: 70vh;
+  max-height: 400px;
   width: auto;
   margin: auto;
 }
 
 .imgcontainer.active img {
   height: 400px;
-  max-height: 70vh;
+  max-height: 400px;
   width: auto;
   margin: auto;
 }
