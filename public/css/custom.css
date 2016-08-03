@@ -103,8 +103,9 @@ li > a {
   height: 100%;
 }
 
-.imgcontianer > img, .imgcontainer.active > img {
-  height: 100%;
+.imgcontainer img, .imgcontainer.active img {
+  height: 500px;
+  max-height: 70vh;
   width: auto;
   margin: auto;
 }
