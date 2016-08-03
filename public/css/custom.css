@@ -152,6 +152,10 @@ li > a {
   padding: 30px;
 }
 
+.jumbotron.about > div > h2 {
+  text-align: justify;
+}
+
 .jumbotron.details > div > h1 {
   margin-top: 10px;
 }
