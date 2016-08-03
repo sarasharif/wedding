@@ -94,13 +94,19 @@ li > a {
 }
 
 .carousel-inner {
-  width: 50vw;
+  height: 70vh;
   margin: auto;
 }
 
-.imgcontainer > * {
+.imgcontainer, .imgcontainer.active {
+  width: 100%;
+  height: 100%;
+}
+
+.imgcontianer > img, .imgcontainer.active > img {
+  height: 100%;
+  width: auto;
   margin: auto;
-  /*height: 100%*/
 }
 
 .carousel-control.right, .carousel-control.left {
