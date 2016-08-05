@@ -3,6 +3,9 @@ var app = angular.module('singlePage', [
   'ngRoute'
 ]);
 
+app.config(["$locationProvider", function($locationProvider) {
+  $locationProvider.html5Mode(true);
+}]);
 /**
  * Configure the Routes
  */
@@ -14,6 +17,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/wedding-party", {templateUrl: "../partials/wedding-party.html", controller: "PageCtrl"})
     .otherwise("/404", {templateUrl: "../partials/404.html", controller: "PageCtrl"});
 }]);
+
 
 /**
  * Controls all other Pages
