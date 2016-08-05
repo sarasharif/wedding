@@ -98,22 +98,23 @@ li > a {
 }
 
 .imgcontainer, .imgcontainer.active {
-  height: 60vh;
+  height: 450px;
   /*max-height: 70vh;*/
   width: auto;
   margin: auto;
+  overflow: hidden;
 }
 
 .imgcontainer img {
-  height: 60vh;
-  max-height: 60vh;
+  height: 450px;
+  max-height: 450px;
   width: auto;
   margin: auto;
 }
 
 .imgcontainer.active img {
-  height: 60vh;
-  max-height: 60vh;
+  height: 450px;
+  max-height: 450px;
   width: auto;
   margin: auto;
 }
