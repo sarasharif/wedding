@@ -124,7 +124,6 @@ li > a {
 
 .carousel-caption {
   /*overflow: visible;*/
-  width: 30%;
   margin: auto;
   display: block;
   white-space: nowrap;
