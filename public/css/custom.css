@@ -122,6 +122,26 @@ li > a {
   background-image: none;
 }
 
+.carousel-caption {
+  /*overflow: visible;*/
+  width: 40%;
+  margin: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+.carousel-caption > h2 {
+  background-color: rgba(0, 0, 0, .5);
+  font-weight: bolder;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 4px;
+  position: relative;
+  top: 55;
+  left: auto;
+  right: auto;
+}
+
 /*wedding party*/
 .party-people {
   display: flex;
